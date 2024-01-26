@@ -9,6 +9,8 @@ export function isPreorderSetContainsOriginalSet(
     currentPreorderSet: PreorderSet,
     originalSet: PreorderElement,
 ): boolean {
+
     return currentPreorderSet.some(value =>
         isPreorderElementsEqual(value, originalSet))
+
 }

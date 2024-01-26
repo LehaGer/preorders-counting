@@ -6,6 +6,8 @@ import {isPreorderElementsEqual} from "../isPreorderElementsEqual";
  * */
 
 export function isPreorderSetContainsEmptySet(currentPreorderSet: PreorderSet): boolean {
+
     return currentPreorderSet.some(value =>
         isPreorderElementsEqual(value, new Set([])))
+
 }

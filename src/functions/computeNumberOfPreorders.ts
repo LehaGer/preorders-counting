@@ -1,6 +1,5 @@
 import {computePreorders} from "./computePreorders";
-import {PreordersVariations, PreorderSet} from "../types";
-import * as console from "console";
+import {PreordersVariations} from "../types";
 
 export function computeNumberOfPreorders(n: number): number[] {
 
@@ -9,14 +8,14 @@ export function computeNumberOfPreorders(n: number): number[] {
         .map((_, index) => index);
 
     const preordersForEachSet: PreordersVariations[] = arrayOfN.map(value => {
+
         const originalSetForPreordersComputing =
             Array(value)
                 .fill(undefined)
                 .map((_, index) => index + 1);
 
-        // console.log({arrayOfN, originalSetForPreordersComputing});
-
         return computePreorders(originalSetForPreordersComputing)
+
     })
 
     return preordersForEachSet

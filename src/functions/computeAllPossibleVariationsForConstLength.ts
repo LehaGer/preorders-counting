@@ -1,4 +1,4 @@
-import {ElemType, PreorderElement} from "../types";
+import {PreorderElement} from "../types";
 
 export function computeAllPossibleVariationsForConstLength(
     availableValues: PreorderElement[],
@@ -20,8 +20,8 @@ export function computeAllPossibleVariationsForConstLength(
                 countOfElems - 1
             )
 
-            const valuesForCurrentIteration = resultOfPrev.map((value, index, array) =>
-                [availableValues[i]].concat(value)
+            const valuesForCurrentIteration = resultOfPrev.map(
+                (value) => [availableValues[i]].concat(value)
             )
 
             arr.push(...valuesForCurrentIteration);
@@ -31,4 +31,5 @@ export function computeAllPossibleVariationsForConstLength(
     }
 
     return arr;
+
 }
