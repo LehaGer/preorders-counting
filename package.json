@@ -28,5 +28,8 @@
     "*.{js,ts}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1"
   }
 }
