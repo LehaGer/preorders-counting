@@ -1,8 +1,8 @@
-import {PreorderElement, PreorderSet} from "../../types";
-import {isPreorderSetContainsEmptySet} from "./isPreorderSetContainsEmptySet";
-import {isPreorderSetContainsOriginalSet} from "./isPreorderSetContainsOriginalSet";
-import {isPreorderSetContainsIntersectionsOfAnySets} from "./isPreorderSetContainsIntersectionsOfAnySets";
-import {isPreorderSetContainsUnionOfAnySets} from "./isPreorderSetContainsUnionOfAnySets";
+import { PreorderElement, PreorderSet } from '../../types';
+import { isPreorderSetContainsEmptySet } from './isPreorderSetContainsEmptySet';
+import { isPreorderSetContainsOriginalSet } from './isPreorderSetContainsOriginalSet';
+import { isPreorderSetContainsIntersectionsOfAnySets } from './isPreorderSetContainsIntersectionsOfAnySets';
+import { isPreorderSetContainsUnionOfAnySets } from './isPreorderSetContainsUnionOfAnySets';
 
 /**
  * A topological space is a set X with well defined, open subsets T which have four special properties:
@@ -14,11 +14,11 @@ import {isPreorderSetContainsUnionOfAnySets} from "./isPreorderSetContainsUnionO
  * */
 
 export function isTypologicalRulesFulfilled(
-    currentPreorderSet: PreorderSet,
-    originalSet: PreorderElement,
+  currentPreorderSet: PreorderSet,
+  originalSet: PreorderElement,
 ): boolean {
-    return isPreorderSetContainsEmptySet(currentPreorderSet)
+  return isPreorderSetContainsEmptySet(currentPreorderSet)
         && isPreorderSetContainsOriginalSet(currentPreorderSet, originalSet)
         && isPreorderSetContainsIntersectionsOfAnySets(currentPreorderSet)
-        && isPreorderSetContainsUnionOfAnySets(currentPreorderSet)
+        && isPreorderSetContainsUnionOfAnySets(currentPreorderSet);
 }
