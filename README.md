@@ -2,8 +2,6 @@
 
 ## Solution of [Test](https://gist.github.com/vahamals/811d22ad0fdfb39984786db2b2cbb574)
 
-## Notes
-
 The task was solved by [finite topological space](https://en.wikipedia.org/wiki/Finite_topological_space) rules
 
 The decision works well for input values not more the `4`.
